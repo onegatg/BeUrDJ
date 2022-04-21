@@ -1,0 +1,39 @@
+﻿@model CreateSessionViewModel
+@{
+    ViewData["Title"] = "CreateSession";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+
+<link rel="stylesheet" href="~/css/createsession.css">
+
+
+
+<div class="col-md-12 main">
+    <h1>Create Session</h1>
+    <form method="post">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="SessionName"></label>
+            <input asp-for="SessionName"/>
+            <span asp-validation-for="SessionName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="SessionDescription" style="word-wrap:initial;"></label>
+            <input asp-for="SessionDescription"  />
+            <span asp-validation-for="SessionDescription" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="DJName"></label>
+            <input asp-for="DJName"/>
+            <span asp-validation-for="DJName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="DJDescription"></label>
+            <input asp-for="DJDescription" />
+            <span asp-validation-for="DJDescription" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-left:5em">Register</button>
+    </form>
+</div>

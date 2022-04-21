@@ -1,0 +1,11 @@
+﻿@model IEnumerable<BeUrDJ_MVC.Models.QueueDTO>
+
+<h3 style="align-content: center">Recommended Songs</h3>
+<div id="recommended" class="scrolling-wrapper">
+    @foreach (var item in Model)
+    {
+        <div id="@Html.DisplayFor(modelItem => item.SongUri)" class="card" onclick="AddSong(this)"> <p hidden>@Html.DisplayFor(modelItem => item.SongUri)</p><img class="recommendedImage" src="@Html.DisplayFor(modelItem => item.SongImage)" /> <br /> @Html.DisplayFor(modelItem => item.SongName) <br /> @Html.DisplayFor(modelItem => item.ArtistName) <br /> <img class="addRecommendedSong" src="~/img/whiteAddSong.png" /></div>
+    }
+</div>
+
+

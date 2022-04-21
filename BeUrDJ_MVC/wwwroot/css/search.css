@@ -1,0 +1,86 @@
+﻿.songImage img {
+    padding-right: 2em;
+    padding-left: 2em;
+    width: 200px;
+    height: auto;
+}
+.songImage {
+    display: inline-block;
+    vertical-align: top;
+}
+.songLabel {
+    padding-right: 2em;
+
+}
+.songSearchBar{
+    padding: 15px;
+}
+.songs {
+    border-bottom: solid 2px lightblue;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    vertical-align: middle;
+}
+.addRecommendedSong {
+    height: auto;
+    width: 50px;
+}
+.recommendedImage{
+    width: 64px;
+    height: auto;
+}
+.addSong {
+    height: auto;
+    width: 90px;
+}
+.songs:hover {
+    background-color: #1b6ec2;
+    cursor: pointer;
+    color: white;
+}
+.songLabel:hover {
+    cursor: pointer;
+}
+.limit {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 400px !important;
+    display:inline-block;
+}
+.songImage {
+    display: inline-block;
+
+}
+@media only screen and (max-width: 767px) {
+    .songImage img {
+        padding-right: 2em;
+        padding-left: 2em;
+        width: 200px;
+        height: auto;
+
+    }
+    .songImage {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .addSong {
+        height: auto;
+        width: 70px;
+        
+    }
+    .limit label{
+        overflow:auto;
+        text-overflow: ellipsis;
+    }
+    .limit {
+        max-width: 150px !important;
+        display: inline-block;
+    }
+}
+#songsFound{
+    padding-top: 5px;
+}
+#searchBar{
+    width: 100% !important;
+}

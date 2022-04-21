@@ -1,0 +1,189 @@
+﻿@model BeUrDJ_MVC.Models.FiltersModel
+
+@{
+    ViewData["Title"] = "Filters";
+}
+<script>
+    $("#filterForm").submit(function (event) {
+        event.preventDefault();
+        console.log($(this).serializeArray());
+        var object = $(this).serializeArray();
+        SubmitFilters(object);
+});
+</script>
+    <div class="row" style="height: 450px;width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;">
+        <form id="filterForm" asp-action="Index" method="post" style="width: 100%;">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group" hidden>
+                <label asp-for="filterId" class="control-label"></label>
+                <input id="filderId" asp-for="filterId" class="form-control" />
+                <span asp-validation-for="filterId" class="text-danger"></span>
+            </div>
+
+            <div id="genres" class="form-group">
+                <span class="genreFilter">
+                    @if (Model.electronic == true)
+                    {
+                        @Html.CheckBoxFor(model => model.electronic)
+                        @Html.LabelFor(model => model.electronic, "Electronic", new { @class = "checkBoxlabel selected" })
+                    }
+                    else
+                    {
+                        @Html.CheckBoxFor(model => model.electronic)
+                        @Html.LabelFor(model => model.electronic, "Electronic", new { @class = "checkBoxlabel" })
+                    }
+
+                </span>
+                <span class="genreFilter">
+                    @if (Model.rap == true)
+                    {
+                        @Html.CheckBoxFor(model => model.rap)
+                        @Html.LabelFor(model => model.rap, "Rap", new { @class = "checkBoxlabel selected" })
+                    }
+                    else
+                    {
+                        @Html.CheckBoxFor(model => model.rap)
+                        @Html.LabelFor(model => model.rap, "Rap", new { @class = "checkBoxlabel" })
+                    }
+                </span>
+                <span class="genreFilter">
+                    @if (Model.rock == true)
+                    {
+                        @Html.CheckBoxFor(model => model.rock)
+                        @Html.LabelFor(model => model.rock, "Rock", new { @class = "checkBoxlabel selected" })
+                    }
+                    else
+                    {
+                        @Html.CheckBoxFor(model => model.rock)
+                        @Html.LabelFor(model => model.rock, "Rock", new { @class = "checkBoxlabel" })
+                    }
+                </span>
+                <span class="genreFilter">
+                    @if (Model.punk == true)
+                    {
+                        @Html.CheckBoxFor(model => model.punk)
+                        @Html.LabelFor(model => model.punk, "Punk", new { @class = "checkBoxlabel selected" })
+                    }
+                    else
+                    {
+                        @Html.CheckBoxFor(model => model.punk)
+                        @Html.LabelFor(model => model.punk, "Punk", new { @class = "checkBoxlabel" })
+                    }
+                </span>
+                <span class="genreFilter">
+                    @if (Model.blues == true)
+                    {
+                        @Html.CheckBoxFor(model => model.blues)
+                        @Html.LabelFor(model => model.blues, "Blues", new { @class = "checkBoxlabel selected" })
+                    }
+                    else
+                    {
+                        @Html.CheckBoxFor(model => model.blues)
+                        @Html.LabelFor(model => model.blues, "Blues", new { @class = "checkBoxlabel" })
+                    }
+                </span>
+                <span class="genreFilter">
+                    @if (Model.classical == true)
+                    {
+                        @Html.CheckBoxFor(model => model.classical)
+                        @Html.LabelFor(model => model.classical, "Classical", new { @class = "checkBoxlabel selected" })
+                    }
+                    else
+                    {
+                        @Html.CheckBoxFor(model => model.classical)
+                        @Html.LabelFor(model => model.classical, "Classical", new { @class = "checkBoxlabel" })
+                    }
+                </span>
+                <span class="genreFilter">
+                    @if (Model.reggae == true)
+                    {
+                        @Html.CheckBoxFor(model => model.reggae)
+                        @Html.LabelFor(model => model.reggae, "Reggae", new { @class = "checkBoxlabel selected" })
+                    }
+                    else
+                    {
+                        @Html.CheckBoxFor(model => model.reggae)
+                        @Html.LabelFor(model => model.reggae, "Reggae", new { @class = "checkBoxlabel" })
+                    }
+                </span>
+                <span class="genreFilter">
+                    @if (Model.jazz == true)
+                    {
+                        @Html.CheckBoxFor(model => model.jazz)
+                        @Html.LabelFor(model => model.jazz, "Jazz", new { @class = "checkBoxlabel selected" })
+                    }
+                    else
+                    {
+                        @Html.CheckBoxFor(model => model.jazz)
+                        @Html.LabelFor(model => model.jazz, "Jazz", new { @class = "checkBoxlabel" })
+                    }
+                </span>
+            </div>
+            <div class="knobContainer">
+                <div class="form-group" hidden>
+                    <label asp-for="tempo" class="control-label">Tempo</label>
+                    <input id="tempo" asp-for="tempo" class="form-control" />
+                    <span asp-validation-for="tempo" class="text-danger"></span>
+                </div>
+                <div class="knob">
+                    <div id="tempoSlider" class="slider"></div>
+                </div>
+
+                <div class="form-group" hidden>
+                    <label asp-for="danceability" class="control-label">Danceability</label>
+                    <input id="danceability" asp-for="danceability" class="form-control" />
+                    <span asp-validation-for="danceability" class="text-danger"></span>
+                </div>
+                <div class="knob">
+                    <div id="danceSlider" class="slider"></div>
+                </div>
+                <div class="form-group" hidden>
+                    <label asp-for="popularity" class="control-label">Popularity</label>
+                    <input id="popularity" asp-for="popularity" class="form-control" />
+                    <span asp-validation-for="popularity" class="text-danger"></span>
+                </div>
+
+                <div class="knob">
+                    <div id="popSlider" class="slider"></div>
+                </div>
+                <div class="form-group" hidden>
+                    <label asp-for="danceability" class="control-label">Danceability</label>
+                    <input id="danceability" asp-for="danceability" class="form-control" />
+                    <span asp-validation-for="danceability" class="text-danger"></span>
+                </div>
+                <div class="knob">
+                    <div id="testSlider" class="slider"></div>
+                </div>
+                <!--
+            <div class="knob">
+                <div id="handle1" class="slider"></div>
+            </div>
+                -->
+            </div>
+            <div class="form-group" hidden>
+                <label asp-for="sessionId" class="control-label"></label>
+                <input asp-for="sessionId" class="form-control" />
+                <span asp-validation-for="sessionId" class="text-danger"></span>
+            </div>
+
+            <div class="modal-footer">
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" style="float: left; margin-right: 5px;" />
+                    <button data-dismiss="modal" value="Back To Queue" class="btn btn-secondary" style="float: right;" onclick="return CloseFilter();">Back to Queue</button>
+                </div>
+            </div>
+        </form>
+    </div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+<link rel="stylesheet" href="~/css/filterknobs.css" />
+<link rel="stylesheet" href="~/css/roundslider.min.css" />
+<script type="text/javascript" src="~/js/roundslider.min.js"></script>
+<script src="~/js/filterknobs.js"></script>
+
+

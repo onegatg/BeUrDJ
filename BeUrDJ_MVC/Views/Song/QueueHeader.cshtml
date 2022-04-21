@@ -1,0 +1,27 @@
+﻿@model BeUrDJ_MVC.Models.ViewModels.QueueHeader
+
+    <script>
+        jQuery(document).ready(function () {
+            $('#exitSession').click(function () {
+                ExitSession(@Model.Session.SessionID, @Model.User.Id);
+            });
+        });
+    </script>
+<h1>@Model.Session.SessionName</h1>
+<h3>@Model.Session.SessionDescription</h3>
+<h5>Hosted By: <img class="profileImage" src="@Model.DjDTO.DjImage" /></h5>
+
+<p>
+    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#searchModal" id="search">
+        Search
+    </button>
+    @if (Model.User.IsDJ == Model.Session.DjID)
+    {
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#filterModal" id="filter">
+            Filters
+        </button>
+    }
+    <a id="songNumber" style="float: right; margin-right: 5px;">Songs In Queue: </a>
+    <br />
+    <!--<a id="listeners" style="float: right; margin-right: 5px;">Listeners: </a>-->
+</p>

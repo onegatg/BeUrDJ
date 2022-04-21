@@ -1,0 +1,18 @@
+﻿.card {
+    display: inline-block;
+    height: 200px;
+    width: 175px;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-bottom: 40px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-wrap: normal;
+    background-color: #1b6ec2;
+    color: white;
+}
+    .card:hover {
+        background-color: #75b7ff;
+        cursor: pointer;
+        color: black;
+    }

@@ -1,0 +1,118 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+    <link rel="stylesheet" type="text/css" href="~/css/queue.css">
+@model BeUrDJ_MVC.Models.ViewModels.UpdateQueueViewModel
+<div>
+    <table id="queueTable" class="table">
+        <colgroup>
+            <col style="width:10%">
+            <col style="width:20%">
+            <col style="width:30%">
+            <col style="width:10%">
+            <col style="width:30%">
+        </colgroup>
+        <tbody>
+            @foreach (var item in Model.QueueDTOs)
+            {
+
+                @if (item.PlayStateID == 3)
+                {
+                    <tr class="currentlyPlaying">
+                        <td class="current">
+                            Currently Playing:
+                        </td>
+
+                        <td class="currentSongImage">
+                            <img src="@Html.DisplayFor(modelItem => item.SongImage)" />
+                        </td>
+
+                        <td class="currentArtist">
+
+                            @Html.DisplayFor(modelItem => item.SongName) By @Html.DisplayFor(modelItem => item.ArtistName)
+                        </td>
+
+                        <!--
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ArtistName)
+                    </td>
+                        -->
+
+                        <td id="likes_@item.SongID" class="currentLikes">
+                            Likes: @Html.DisplayFor(modelItem => item.Likes)
+                        </td>
+                        <td>                    </td>
+                        <!--<td>
+                            <img class="thumbs" role="button" src="~/img/like.png" alt="" onclick="javascript: return LikeSong(@item.SongID,@item.Likes)" />
+                            <img class="thumbs" role="button" src="~/img/dislike.png" alt="" onclick="javascript: return DislikeSong(@item.SongID,@item.Likes)" />
+                        </td>
+                    -->
+                    </tr>
+                }
+                @if (item.PlayStateID == 2)
+                {
+                    <tr class="upNext">
+                        <td class="next">
+                            Up Next:
+                        </td>
+
+                        <td class="nextSongImage">
+                            <img src="@Html.DisplayFor(modelItem => item.SongImage)" />
+                        </td>
+
+                        <td class="nextArtist">
+
+
+
+                            @Html.DisplayFor(modelItem => item.SongName) By @Html.DisplayFor(modelItem => item.ArtistName)
+                        </td>
+
+                        <!--
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ArtistName)
+                    </td>
+                            -->
+                        <td id="likes_@item.SongID" class="nextLikes">
+
+                            Likes: @Html.DisplayFor(modelItem => item.Likes)
+                        </td>
+                        <td class="nextSongImage">                       </td>
+                        <!-- <td>
+                        <img class="thumbs" role="button" src="~/img/like.png" alt="" onclick="javascript: return LikeSong(@item.SongID,@item.Likes)" />
+                        <img class="thumbs" role="button" src="~/img/dislike.png" alt="" onclick="javascript: return DislikeSong(@item.SongID,@item.Likes)" />
+                    </td> -->
+                    </tr>
+                    }
+                    @if (item.PlayStateID == 1)
+                    {
+
+                    <tr class="notPlayed">
+                        <td class="not">
+                        </td>
+                        <td class="notPlayedSongImage">
+                            <img src="@Html.DisplayFor(modelItem => item.SongImage)" />
+                        </td>
+
+                        <td class="notPlayedArtist">
+
+                            @Html.DisplayFor(modelItem => item.SongName) By @Html.DisplayFor(modelItem => item.ArtistName)
+                        </td>
+                        <!--
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ArtistName)
+                        </td>
+                    -->
+                        <td id="likes_@item.SongID" class="notPlayedLikes">
+
+                            Likes: @Html.DisplayFor(modelItem => item.Likes)
+                        </td>
+                        <td>
+                            <img class="thumbs" role="button" src="~/img/like.png" alt="" onclick="javascript: return UpdateLike(@item.SongID,1)" />
+                            <img class="thumbs" role="button" src="~/img/dislike.png" alt="" onclick="javascript: return UpdateLike(@item.SongID,-1)" />
+                        </td>
+                    </tr>
+                }
+}
+        </tbody>
+    </table>
+</div>

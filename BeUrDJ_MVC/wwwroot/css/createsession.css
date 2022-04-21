@@ -1,0 +1,11 @@
+﻿
+.main {
+    position: fixed;
+    top: 35%;
+    left: 40%;
+    margin-top: -50px;
+    margin-left: -100px;
+}
+label{
+    width: 100px;
+}

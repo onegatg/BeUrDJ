@@ -1,0 +1,47 @@
+﻿body {
+    /* Location of the image */
+    background-image: url(/img/dj.jpg);
+    /* Image is centered vertically and horizontally at all times */
+    background-position: center center;
+    /* Image doesn't repeat */
+    background-repeat: no-repeat;
+    /* Makes the image fixed in the viewport so that it doesn't move when 
+     the content height is greater than the image height */
+    background-attachment: fixed;
+    /* This is what makes the background image rescale based on its container's size */
+    background-size: cover;
+    /* Pick a solid background color that will be displayed while the background image is loading */
+    background-color: #464646;
+    /* SHORTHAND CSS NOTATION
+   * background: url(background-photo.jpg) center center cover no-repeat fixed;
+   */
+}
+@media only screen and (max-width: 767px) {
+    body {
+        background-image: url(/img/dj.jpg);
+    }
+    .timeline {
+        width: 80%;
+        height: auto;
+        vertical-align: middle;
+    }
+    .homeHeader {
+        padding-top: 25%;
+    }
+    .beurdj {
+        width: 90px;
+        height: auto;
+    }
+}
+.beurdj {
+    width: 200px;
+    height: auto;
+}
+.timeline{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    padding-bottom: 20px;
+}
+.homeHeader {
+}

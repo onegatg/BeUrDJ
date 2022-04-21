@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeUrDJ_MVC", "BeUrDJ_MVC\BeUrDJ_MVC.csproj", "{C3EEDC78-6862-4BBA-90C0-BA1272683F92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeUrDJ_Test", "BeUrDJ_Test\BeUrDJ_Test.csproj", "{D28E06BB-B3B7-4D73-A20A-F68939B5B36C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3EEDC78-6862-4BBA-90C0-BA1272683F92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3EEDC78-6862-4BBA-90C0-BA1272683F92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3EEDC78-6862-4BBA-90C0-BA1272683F92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3EEDC78-6862-4BBA-90C0-BA1272683F92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D28E06BB-B3B7-4D73-A20A-F68939B5B36C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D28E06BB-B3B7-4D73-A20A-F68939B5B36C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D28E06BB-B3B7-4D73-A20A-F68939B5B36C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D28E06BB-B3B7-4D73-A20A-F68939B5B36C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE8B47ED-6EA0-4E15-B903-9FC5DDEAA7B0}
+	EndGlobalSection
+EndGlobal

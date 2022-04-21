@@ -1,0 +1,173 @@
+﻿.thumbs {
+    resize: both;
+    height: 60px;
+    width: 60px;
+}
+.thumbs:hover{
+    cursor: pointer;
+}
+tr {
+    border-bottom: 2px solid grey;
+    font-size: 24px;
+}
+.profilePicture{
+    width: 50px;
+    height: 50px;
+}
+/*FIGURE OUT TABLE COLUMN WIDTHS FOR EACH: NOT PLAYED< UP NEXT, CURRENTLY PLAYING*/
+/*
+    Not Played Songs
+*/
+.notPlayed {
+    background-color: white;
+    color: black;
+}
+.notPlayedSongImage{
+
+}
+.notPlayedArtist {
+}
+.notPlayedLikes{
+
+}
+/*
+    Up Next Song
+*/
+.upNext {
+    background-color: #75b7ff;
+    color: black;
+    width: 100%;
+}
+.next{
+
+}
+.nextSongImage {
+}
+.nextArtist{
+
+}
+.nextLikes{
+
+}
+/*
+    Currently Playing Song
+*/
+.currentlyPlaying {
+    animation: blinkingText 1.2s infinite;
+    color: white;
+    width: 100%;
+}
+.current{
+    width: 10%;
+}
+.currentSongImage{
+}
+.currentArtist{
+
+}
+.currentLikes{
+
+}
+
+@keyframes blinkingText {
+    0% {
+        background-color: #1b6ec2;
+    }
+    25% {
+        background-color: #0058b8;
+    }
+    50% {
+        background-color: #003e82;
+    }
+    75% {
+        background-color: #0058b8;
+    }
+    100% {
+        background-color: #1b6ec2;
+    }
+}
+
+.playingTable{
+
+}
+.nextTable {
+}
+.notPlayedTable{
+
+}
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    height: 200px;
+}
+    .scrolling-wrapper .card {
+        display: inline-block;
+        height: 200px;
+        width: 175px;
+        padding-left: 10px;
+        padding-top: 10px;
+        margin-bottom: 40px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        color: white;
+        background-color: #1b6ec2;
+    }
+        .scrolling-wrapper .card:hover {
+            background-color: #75b7ff;
+            cursor: pointer;
+            color: black;
+        }
+
+.addSong {
+    height: 50px;
+    width: 50px;
+}
+
+    .addSong:hover {
+        cursor: pointer;
+    }
+
+.modalFilter {
+    position: absolute !important;
+    float: left !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width:900px !important;
+}
+@media only screen and (max-width: 767px) {
+    td {
+        font-size:large;
+    }
+}
+.exitBtn {
+    margin-bottom: 10px;
+    float: right;
+    background-color: #343a40;
+}
+#filter {
+    background-color: #343a40;
+}
+#search {
+    background-color: #343a40;
+}
+#queueTable tbody tr td {
+    font-size: 25px;
+    vertical-align: middle;
+    align-content: center;
+    font-weight: bold;
+}
+
+    #queueTable tbody tr td image {
+        height: auto;
+        width: 80px;
+        padding-bottom: 5px;
+    }
+
+    #queueTable tbody tr td .thisSongImage {
+        height: auto;
+        width: 120px;
+    }

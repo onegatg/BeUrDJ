@@ -1,0 +1,391 @@
+﻿
+#tempoSlider {
+    position: relative;
+    z-index: 2;
+    top: 25%;
+    left: 25%;
+    transform: translate(-25%, -25%);
+    font-family: Roboto, sans-serif;
+}
+    #tempoSlider::before, .slider::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 175px;
+        height: 175px;
+        background: #000;
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    #tempoSlider::after {
+        z-index: 2;
+        box-shadow: inset 0 0 5px #000;
+        background: linear-gradient(-190deg, rgba(255, 255, 255, .3), rgba(255, 255, 255, 0) 50%);
+    }
+
+#danceSlider {
+    position: relative;
+    z-index: 2;
+    top: 25%;
+    left: 25%;
+    transform: translate(-25%, -25%);
+    font-family: Roboto, sans-serif;
+}
+
+    #danceSlider::before, .slider::after {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 175px;
+        height: 175px;
+        background: #000;
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    #danceSlider::after {
+        z-index: 2;
+        box-shadow: inset 0 0 5px #000;
+        background: linear-gradient(-190deg, rgba(255, 255, 255, .3), rgba(255, 255, 255, 0) 50%);
+    }
+#popSlider {
+    position: relative;
+    z-index: 2;
+    top: 25%;
+    left: 25%;
+    transform: translate(-25%, -25%);
+    font-family: Roboto, sans-serif;
+}
+
+    #popSlider::before, .slider::after {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 175px;
+        height: 175px;
+        background: #000;
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    #popSlider::after {
+        z-index: 2;
+        box-shadow: inset 0 0 5px #000;
+        background: linear-gradient(-190deg, rgba(255, 255, 255, .3), rgba(255, 255, 255, 0) 50%);
+    }
+#testSlider {
+    position: relative;
+    z-index: 2;
+    top: 25%;
+    left: 25%;
+    transform: translate(-25%, -25%);
+    font-family: Roboto, sans-serif;
+}
+
+    #testSlider::before, .slider::after {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 175px;
+        height: 175px;
+        background: #000;
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    #testSlider::after {
+        z-index: 2;
+        box-shadow: inset 0 0 5px #000;
+        background: linear-gradient(-190deg, rgba(255, 255, 255, .3), rgba(255, 255, 255, 0) 50%);
+    }
+    /*
+    .rs-overlay{
+        width: 60px !important;
+    }
+        */
+#animation1.rs-animation .rs-transition  {
+  transition: all .1s ease-in-out;
+}
+
+.rs-gradient, .rs-gradient:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: hsl(209, 100%, 42%);
+  box-shadow: inset 0 -2px 5px rgba(0, 0, 0, .2), inset 0 3px 5px rgba(0, 0, 0, .1), 0 0 3px #000;
+  border-radius: 50%;
+  z-index: 3;
+  opacity: .8
+}
+.rs-overlay1{
+    height: 95px;
+}
+
+
+.rs-gradient:after {
+  background: linear-gradient(0, rgba(0, 0, 0, 0), rgba(0, 0, 0, .4));
+}
+
+.rs-path-color {
+  background: #444;
+}
+
+.rs-range-color {
+  background: #fff;
+  transition: background .02s ease-in-out;
+}
+
+.rs-border {
+  border: 1px solid #000;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, .3);
+}
+
+.rs-seperator {
+  border: none;
+}
+
+.rs-control .rs-split .rs-path, .rs-control .rs-overlay1, .rs-control .rs-overlay2 {
+
+}
+
+.rs-border, .rs-bg-color {
+  background: #000;
+}
+
+#danceSlider .rs-tooltip-text {
+    font-family: Roboto, sans-serif;
+    width: 75px !important;
+    height: 75px !important;
+    font-size: 30px;
+    border-radius: 7px;
+    transition: background .02s ease-in-out;
+    color: black;
+    pointer-events: none;
+    transform: translateY(3px);
+    text-align: center;
+    padding-top: 20px;
+}
+
+#testSlider .rs-tooltip-text {
+    font-family: Roboto, sans-serif;
+    width: 75px !important;
+    height: 75px !important;
+    font-size: 30px;
+    border-radius: 7px;
+    transition: background .02s ease-in-out;
+    color: #fff;
+    pointer-events: none;
+    transform: translateY(3px);
+    text-align: center;
+    padding-top: 20px;
+}
+
+#tempoSlider .rs-tooltip-text {
+    font-family: Roboto, sans-serif;
+    width: 75px !important;
+    height: 75px !important;
+    font-size: 30px;
+    border-radius: 7px;
+    transition: background .02s ease-in-out;
+    color: black;
+    pointer-events: none;
+    transform: translateY(3px);
+    text-align: center;
+    padding-top: 20px;
+}
+
+#popSlider .rs-tooltip-text {
+    font-family: Roboto, sans-serif;
+    width: 75px !important;
+    height: 75px !important;
+    font-size: 30px;
+    border-radius: 7px;
+    transition: background .02s ease-in-out;
+    color: black;
+    pointer-events: none;
+    transform: translateY(3px);
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+#tempoSlider .rs-tooltip-text:before {
+    content: 'Tempo';
+    position: absolute;
+    top: 5px;
+    right: 14px;
+    font-size: 15px;
+}
+#danceSlider .rs-tooltip-text:before {
+    content: 'Danceability';
+    position: absolute;
+    top: 5px;
+    right: -5px;
+    font-size: 15px;
+}
+#popSlider .rs-tooltip-text:before {
+    content: 'Popularity';
+    position: absolute;
+    top: 5px;
+    right: 2px;
+    font-size: 15px;
+}
+#testSlider .rs-tooltip-text:before {
+    content: 'Energy';
+    position: absolute;
+    top: 5px;
+    right: 13px;
+    font-size: 15px;
+}
+
+.rs-handle {
+
+}
+
+.rs-handle {
+    background: none;
+    border: none;
+    background: none;
+    width: 60px;
+    height: 60px;
+}
+.rs-handle::after  {
+    background: #fff;
+    border-radius: 0;
+    border: none;
+    height: 1px;
+    width: 14px;
+    margin: 8px 0 0 3px;
+}
+.rs-handle-dot::after{
+    display:none !important;
+    border: 0px !important;
+}
+
+.rs-handle.rs-move {
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+}
+
+.knob {
+    padding: 0px 5px;
+    float: left;
+}
+.knobContainer {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    width: 100%;
+    height: 210px;
+
+}
+@media only screen and (max-width: 767px) {
+    .knobContainer {
+        padding-top: 50px;
+        padding-bottom: 30px;
+        width: 100%;
+        height: 370px;
+    }
+
+}
+@media only screen and (max-width: 450px) {
+    .knobContainer {
+        padding-top: 50px;
+        padding-bottom: 30px;
+        width: 100%;
+        height: 370px;
+    }
+}
+
+#handle1 .rs-tooltip {
+    top: 50%;
+    font-size: 16px;
+    color: black;
+    width: 70%;
+    height: 70%;
+    justify-content: center;
+    border-radius: 50%;
+    border-color: grey;
+}
+
+    #handle1 .rs-tooltip div {
+        border-radius: 50%;
+        text-align: center;
+        padding-top:25% !important;
+        box-shadow: inset 0 0 5px #000;
+        padding: 5px 5px 5px;
+        width: 100%;
+        height: 100%;
+    }
+
+#handle1 .rs-range-color {
+    background-color: #DB5959;
+}
+
+#handle1 .rs-path-color {
+    background-color: #F0C5C5;
+}
+
+
+#handle1 .rs-handle {
+    background: white;
+    border: 1px solid grey;
+    width: 40px;
+    height: 40px;
+}
+
+    #handle1 .rs-handle::after {
+        background: #fff;
+        border-radius: 50%;
+        border: solid, black;
+        height: 40px;
+        width: 40px;
+    }
+
+    #handle1 .rs-handle.rs-move {
+        cursor: pointer;
+        cursor: pointer;
+    }
+input[type="checkbox"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+.checkBoxlabel {
+    display: inline-block;
+    background-color: #ddd;
+    padding: 10px 20px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border: 2px solid #444;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.selected {
+    background-color: #bfb;
+    border-color: #4c4;
+}
+.unselected {
+    background-color: #ddd;
+    padding: 10px 20px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border: 2px solid #444;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.genreFilter{
+    width: 50px;
+}
+    .genreFilter input[type=checkbox]:checked {
+
+    }
